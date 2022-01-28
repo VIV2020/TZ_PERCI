@@ -1,0 +1,178 @@
+doctype HTML
+
+html
+	head
+		title SHOPGUIDE
+		meta(name="description" content="Описание страницы")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(rel="stylesheet" href="style.css")
+		base(target="_blank")
+
+	body
+		mixin social(icon)
+			.header__social-item: a(href="#") 
+				img(src=icon alt="social").header__social-icon
+
+		mixin download(src, class_name)
+			.header__download: a(href="#")
+				img(src=src, class=class_name alt="Скачать")
+
+		mixin partners(icon, class_name)
+			.content__partners-slider 
+				img(src=icon class=class_name alt="Партнеры").content__partners-img 
+
+		header.header
+			.container
+				.header__inner
+					.header__top
+						.header__social
+							+social("design/images/icon_fb.svg")
+							+social("design/images/icon_ig.svg")
+							+social("design/images/icon_tw.svg")
+							+social("design/images/icon_vk.svg")
+							+social("design/images/icon_ok.svg")
+
+						button.header__button СТАТЬ ПАРТНЕРОМ 
+					.header__content
+						img(src="design/images/only_popup.svg" alt="popup").header__popup 
+						p.header__popup-title ТОЛЬКО ЛУЧШИЕ АКЦИИ
+						img(src="design/images/shopguide.svg" alt="Заголовок").header__title
+						fieldset.header__subtitle 
+							legend.header__subtitle-download загрузить
+						.header__download-ios-android
+							+download("design/images/download_ios.svg", "header__download-ios")
+							+download("design/images/download_android.svg", "header__download-android")
+					.header__picture
+						img(src="design/images/_phone1.png" alt="Телефон").header__phone
+		div.content
+			.content__container
+				.content__small-display
+					button.content__small-display-btn
+						p.content__small-display-btn-title вниз
+						img(src="design/images/arrow_down.svg" alt="Кнопка вниз").content__small-display-btn-img
+						p.content__small-display-btn-title вниз
+			.content__container-benefits 
+				.content__benefits
+					.content__benefits-part
+						img(src="design/images/like.svg" alt="Like").content__benefits-img
+						h1.content__benefits-title ТОЛЬКО ЛУЧШЕЕ
+						p.content__benefits-content 
+							|Всегда актуальные 
+							br
+							|акции и скидки у вас в телефоне
+					.content__benefits-part
+						img(src="design/images/geo.svg" alt="Геолокация").content__benefits-img
+						h1.content__benefits-title ВСЕ РЯДОМ
+						p.content__benefits-content 
+							|Находите ближайшие акции на карте 
+							br
+							|рядом с вами.
+					.content__benefits-part
+						img(src="design/images/bell.svg" alt="Колокольчик").content__benefits-img
+						h1.content__benefits-title УВЕДОМЛЕНИЯ
+						p.content__benefits-content 
+							|Подписывайтесь только на то, 
+							br
+							|что вас интересует и всегда будьте 
+							br
+							|в курсе новых акций.
+					.content__benefits-part
+						img(src="design/images/sheet.svg" alt="Каталог").content__benefits-img
+						h1.content__benefits-title КАТАЛОГ
+						p.content__benefits-content 
+							|Огромный каталог с информацией 
+							br
+							|о магазинах, брендах и ТЦ всегда 
+							br
+							|под рукой.
+			.content__information-block
+				.content__container-information
+					.content__information-parts
+						img(src="design/images/phone2_ref.png" alt="Телефон").content__information-img
+						.content__information-left
+							p.content__information-title ИЗБРАННОЕ
+
+						.content__information-right
+							.content__information-titles
+								p.content__information-title.content__information-title-underline ПРОФИЛЬ АКЦИИ
+								p.content__information-title ПОДПИСКИ
+								p.content__information-title КАРТА
+								p.content__information-title МОЯ ЛЕНТА
+
+							.content__information-text
+								p.content__information-text-paragraph1
+									|Вы всегда получите полную информацию об акции: подробное описание, бренд,
+									br
+									|магазины и торговые центры где проходит акция.
+								br
+								p.content__information-text-paragraph2
+									|Также доступна возможность сразу перейти на сайт товара и купить в рамках
+									br
+									|действующей акции.
+
+			.content__stock-block
+				.content__container-stock
+					.content__stock
+						h1.content__stock-title НАШИ АКЦИИ
+						p.content__stock-text
+							|Каждый день в Москве проходят распродажи.
+							br
+							|В акциях и скидках дня могут принимать участие любые группы
+							br
+							|товаров. Особенно популярны распродажи одежды и обуви,
+							br
+							|распродажи мебели, распродажи сумок.
+
+						p.content__stock-text-mobile1
+							|Каждый день в Москве проходят распродажи.
+							br
+							|В акциях и скидках дня могут принимать
+							br
+							|участие любые группы товаров. 
+						p.content__stock-text-mobile2
+							|Особенно популярны распродажи 
+							br
+							|одежды и обуви, распродажи мебели, 
+							br
+							|распродажи сумок.
+
+						img(src="design/images/_phone3_2.png" alt="Телефон").content__stock-img2
+						img(src="design/images/_phone3_1.png" alt="Телефон").content__stock-img1
+						
+			h1.content__partners-title НАШИ ПАРТНЕРЫ
+			.content__partners-block
+				.content__container-partners
+					.content__partners
+						
+						.content__partners-logos
+							.content__partners-arrow-left
+								img(src="design/images/arrow_left.svg" alt="Стрелка влево").content__partners-arrow-left-img
+							+partners("design/images/logos/logo_prada.png", "content__partners-prada")
+							+partners("design/images/logos/logo_nike.png")
+							+partners("design/images/logos/logo_cym.png")
+							+partners("design/images/logos/logo_adidas.png")
+							+partners("design/images/logos/logo_gum.png")
+							+partners("design/images/logos/logo_zara.png")
+							+partners("design/images/logos/logo_carlo.png", "content__partners-carlo")
+							.content__partners-arrow-right
+								img(src="design/images/arrow_right.svg" alt="Стрелка вправо").content__partners-arrow-right-img
+				
+			p.content__partners-sentence.content__partners-question Хотите стать партнером?
+			p.content__partners-sentence Напишите нам и про ваши акции узнают все.		
+			button.content__partners-btn СТАТЬ ПАРТНЕРОМ
+
+		footer.footer
+			.footer__container
+				.footer__inner
+					.footer__text
+						p.footer__copy 2016 © SHOPGUIDE
+						.footer__links
+							a(href="#").footer__link1 ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ
+							a(href="#").footer__link2 ПРАВИЛА ПОЛЬЗОВАНИЯ
+					button.footer__btn
+	
+						img(src="design/images/contact.svg" alt="Сообщение").footer__btn-img
+						p.footer__btn-title СВЯЗАТЬСЯ С НАМИ
+
+
+

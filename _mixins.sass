@@ -1,0 +1,59 @@
+@mixin clear
+    padding: 0
+    margin: 0
+
+@mixin list-clear
+    @include clear
+    list-style: none
+
+/* Для мобильных устройств
+@mixin tablet
+    @media (min-width: 0px) and (max-width: #{$desktop-width - 1px})
+        @content
+
+// @mixin tablet_280_749
+//     @media (min-width: 280px) and (max-width: 749px)
+//         @content
+
+/* для десктопов
+@mixin desktop
+    @media (min-width: #{$desktop-width})
+        @content
+
+/* Для блока stock (размеры телефонов)
+@mixin desktop_1024_1120
+    @media (min-width: 1024px) and (max-width: 1120px)
+        @content
+
+@mixin desktop_1119_1220
+    @media (min-width: 1119px) and (max-width: 1220px)
+        @content
+
+/* Для блока information (для изменения размеров телефона и заголовков блока)
+@mixin desktop_1366_1440
+    @media (min-width: 1366px) and (max-width: 1440px)
+        @content
+
+@mixin desktop_1260_1365
+    @media (min-width: 1260px) and (max-width: 1365px)
+        @content
+@mixin desktop_1125_1259
+    @media (min-width: 1125px) and (max-width: 1259px)
+        @content
+
+@mixin desktop_1024_1124
+    @media (min-width: 1024px) and (max-width: 1124px)
+        @content
+
+/* Для блока partners (изменение размеров иконок)
+@mixin desktop_1024_1290
+    @media (min-width: 1024px) and (max-width: 1290px)
+        @content
+
+
+
+
+    
+
+    
+    

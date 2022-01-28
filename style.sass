@@ -1,0 +1,696 @@
+@import "_mixins"
+@import "_params"
+@import "fonts"
+
+html, body
+    width: 100%
+    @include clear
+    background-color: #fff
+
+h1, h2, h3, h4, h5, h6, p
+    @include clear
+
+a
+    text-decoration: none
+
+.container
+    width: 100%
+    max-width: 1280px
+    text-align: center
+    margin: 0 auto
+    min-height: 810px
+    position: relative
+
+.header
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    z-index: 120
+    &__top
+        display: flex
+        justify-content: space-between
+        padding-top: 40px
+        @include tablet
+            display: none
+       
+    &__social
+        display: flex
+        padding-left: 10px
+
+    &__social-item
+        width: 40px
+        height: 40px
+        background-image: url("design/images/icon_rect.svg")
+        margin-right: 13px
+        opacity: 1
+        transition: all 0.3s ease-out
+        cursor: pointerstock-title
+        &:hover
+            opacity: 0.5
+    &__social-icon
+        width: 40px
+        height: 40px
+
+    &__button
+        width: 195px
+        height: 38px
+        font-size: 15px
+        font-family: futurademic
+        color: rgb(255, 255, 255)
+        line-height: 2
+        cursor: pointer
+        background: transparent
+        border-style: solid
+        border-width: 2px
+        border-color: rgb(255, 255, 255)
+        border-radius: 6px
+        background-color: rgba(41, 211, 209, 0)
+        margin-right: 5px
+        opacity: 1
+        transition: all 0.3s ease-out
+        margin-right: 5px
+        &:hover
+            opacity: 0.5
+
+    &__content
+        display: flex
+        flex-direction: column
+        width: 400px
+        margin-top: 240px
+        margin-left: 140px
+        @include tablet  
+            margin: auto
+            margin-top: 120px
+            width: 510px
+
+    &__popup
+        display: block
+        width: 161px
+        height: 36px
+        margin-left: 240px
+        @include tablet
+            width: 231px
+            height: 47px
+            margin-left: 295px
+
+    &__popup-title
+        font-size: 12px
+        font-family: "futurabookc"
+        color: #fff
+        display: block
+        width: 150px
+        margin-top: -28px
+        margin-bottom: 25px
+        margin-left: 245px
+        @include tablet
+            font-size: 15px
+            font-family: "futurabookc"
+            width: 220px
+            margin-top: -35px
+            margin-left: 300px
+
+    &__subtitle
+        border-left: none
+        border-right: none
+        border-bottom: none
+        border-top: 1px solid #fff
+        text-align: center
+        margin: 0
+        width: auto
+
+    &__subtitle-download
+        padding: 10px
+        margin: auto
+        font-size: 16.47px
+        letter-spacing: 1.34px
+        font-family: futurabookc
+        color: rgb(255, 255, 255)
+        text-align: center
+        @include tablet
+            font-size: 32px
+
+    &__title
+        width: 401px
+        height: 52px
+        display: block
+        @include tablet
+            width: 510px
+            height: 80px
+
+    &__download-ios-android
+        display: flex
+        justify-content: space-between
+        width: 406px
+        @include tablet
+            width: 510px
+    &__download
+
+    &__download-ios
+        display: block
+        border-style: solid
+        border-width: 2px
+        border-color: #ffffff34
+        border-radius: 6px
+        background-color: rgba(247, 247, 247, 0)
+        width: 190px
+        height: 55px
+        cursor: pointer
+        transition: all 0.3s ease-out
+        &:hover
+            border-color: #ffffff
+
+        @include tablet
+            width: 237px
+            height: 70px
+
+    &__download-android
+        display: block
+        border-style: solid
+        border-width: 2px
+        border-color: #ffffff34
+        border-radius: 6px
+        background-color: rgba(247, 247, 247, 0)
+        width: 190px
+        height: 55px
+        cursor: pointer
+        transition: all 0.3s ease-out
+
+        &:hover
+            border-color: #ffffff
+        @include tablet
+            width: 237px
+            height: 70px
+
+    &__picture
+    &__phone
+        position: absolute
+        right: 10px
+        top: 232px
+        @include tablet
+            display: none
+
+header
+    background: url("design/images/bg.jpg")
+    background-position: center center
+    min-height: 500px
+    width: 100%
+    overflow: hidden
+    background-repeat: no-repeat
+    background-size: cover
+
+    @include tablet
+        max-height: 520px
+        background-size: auto
+
+.content
+    display: flex
+    flex-direction: column
+    justify-content: center
+    &__container
+        width: 100%
+        max-width: 1280px
+        text-align: center
+        margin: 0 auto
+        height: 50px
+        position: relative
+        @include tablet
+            display: none
+
+    &__small-display
+        @include tablet
+            display: none
+
+    &__small-display-btn
+        border-radius: 10px
+        border-style: solid
+        border-width: 2px
+        border-color: $blue
+        background-color: $blue
+        filter: drop-shadow(-2.3px -7.7px 57px rgba(0, 0, 0, 0.54))
+        width: 277px
+        height: 49px
+        display: flex
+        align-items: center
+        justify-content: space-evenly
+        margin: 0 auto
+        margin-top: -25px
+        cursor: pointer
+
+    &__small-display-btn-img
+        width: 37px
+        height: 17px
+
+    &__small-display-btn-title
+        font-family: futurabookc
+        font-size: 14px
+        letter-spacing: 1.12px
+        line-height: 18.4px
+        color: #fff
+        width: 67px
+        height: 19px
+        text-transform: uppercase
+
+    &__container-benefits
+        width: 100%
+        max-width: 1400px
+        text-align: center
+        margin: 0 auto
+        position: relative
+
+    &__benefits
+        display: flex
+        margin-top: 50px
+        @include tablet
+            flex-wrap: wrap
+            margin-top: 25px
+
+    &__benefits-part
+        flex-grow: 1
+        width: 270px
+        margin: 0px 30px
+        @include tablet
+            margin-bottom: 30px
+
+    &__benefits-img
+        width: 100px
+        @include tablet
+            width: 130px
+
+    &__benefits-title
+        font-size: 22px
+        font-family: futurademic
+        text-transform: uppercase
+        line-height: 1.063
+        text-align: center
+        margin-top: 20px
+
+    &__benefits-content
+        font-family: futurabookc
+        font-size: 18px
+        text-align: center
+        margin-top: 10px
+        @include tablet
+            font-size: 22px
+            word-wrap: break-all
+
+    &__container-information
+        max-width: 1470px
+        width: 100%
+        text-align: center
+        margin: 0 auto
+        position: relative
+        height: 430px
+
+    &__information-block
+        height: 430px
+        background-color: $blue
+        width: 100%
+        margin-top: 134px
+        position: relative
+        @include tablet
+            display: none
+         
+    &__information-parts
+        display: flex
+        justify-content: space-between
+
+    &__information-img
+        position: absolute
+        left: 250px
+        top: -70px
+
+        @include desktop_1260_1365
+            left: 170px
+
+        @include desktop_1366_1440
+            left: 200px
+
+        @include desktop_1125_1259
+            left: 180px
+
+        @include desktop_1024_1124
+            left: 110px
+    &__information-right
+        display: flex
+        justify-content: flex-end
+        margin-right: 10px
+        flex-direction: column
+
+    &__information-text
+        text-align: left
+        margin-left: 38px
+        font-size: 20px
+        line-height: 26px
+        font-family: futurabookc
+        color: #fff
+        margin-top: 50px
+        display: flex
+        flex-direction: column
+        @include desktop_1024_1124
+            justify-content: flex-end
+            width: 400px
+
+        @include desktop_1125_1259
+            width: 400px
+            
+    &__information-titles
+        width: 100%
+        display: flex
+        @include desktop_1024_1124
+            justify-content: flex-end
+
+    &__information-text-paragraph2
+        
+    &__information-title-underline
+        border-bottom: 4px solid #fff
+        padding-bottom: 10px
+
+    &__information-left
+        display: flex
+
+    &__information-title
+        font-size: 32px
+        color: #fff
+        font-family: futurademic
+        margin-left: 38px
+        margin-top: 60px
+        cursor: pointer
+        @include desktop_1366_1440
+            font-size: 30px
+
+        @include desktop_1260_1365
+            font-size: 28px
+
+        @include desktop_1125_1259
+            font-size: 20px
+
+        @include desktop_1024_1124
+            font-size: 18px
+
+    &__stock-block      
+        background-color: $grey
+        width: 100%
+        margin-top: 314px
+        position: relative
+       
+        @include tablet
+            background-color: #fff
+            text-align: center
+            margin-top: 0px
+
+    &__container-stock
+        max-width: 1100px
+        width: 100%
+        margin: 0 auto
+        position: relative
+ 
+        @include tablet
+            max-width: 640px
+
+    &__stock
+        @include desktop
+            height: 410px
+
+    &__stock-title
+        font-size: 32px
+        font-family: futurademic
+        line-height: 63px
+        letter-spacing: 0.76px
+        padding-top: 45px
+        margin-left: 45px
+        @include tablet
+            font-size: 36px
+
+    &__stock-text
+        font-family: futurabookc
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        line-height: 26px
+        padding-top: 15px
+        margin-left: 45px
+        @include tablet
+            display: none
+
+    &__stock-text-mobile1, &__stock-text-mobile2
+        display: none
+        @include tablet
+            display: flex
+            justify-content: center
+            font-size: 34px
+            line-height: 38px
+            font-family: futurabookc
+            font-style: normal
+            font-weight: normal
+            padding-top: 36px
+        
+    &__stock-img1
+        position: absolute
+        left: 600px
+        top: -150px
+        width: auto
+        @include desktop_1024_1120
+            width: 226px
+            left: 575px
+            top: -110px
+        @include tablet
+            display: none
+
+        @include desktop_1119_1220
+            left: 535px
+
+    &__stock-img2
+        width: auto
+        position: absolute
+        left: 800px
+        top: -180px
+        @include desktop_1024_1120
+            width: 280px
+            left: 725px
+            top: -150px
+        @include tablet
+            display: none
+
+        @include desktop_1119_1220
+            left: 725px
+
+    &__partners-title
+        font-family: futurademic
+        font-style: normal
+        font-weight: 600
+        font-size: 36px
+        line-height: 63px
+        color: $red
+        margin-top: 50px
+        text-align: center
+
+    &__partners-block
+        background-color: $red
+        width: 100%
+        margin-top: 20px
+        position: relative
+
+    &__container-partners
+        max-width: 1300px
+        width: 100%
+        margin: 0 auto
+        position: relative
+        text-align: center
+        @include tablet
+            max-width: 1024px
+
+    &__partners-logos
+        display: flex
+        height: 185px
+        justify-content: space-around
+
+    &__partners-slider
+        margin: auto 20px
+        opacity: 0.25
+        cursor: pointer
+        transition: all 0.2s ease-out
+        &:hover
+            opacity: 1
+        
+    &__partners-img
+        @include desktop_1024_1290
+            width: 110px
+
+    &__partners-arrow-left, &__partners-arrow-right
+        border-radius: 50%
+        width: 38px
+        height: 38px
+        margin: auto 10px
+        display: flex
+        align-items: center
+        justify-content: center
+        background-color: #ffffff15
+        cursor: pointer
+        transition: all 0.2s ease-out
+        &:hover
+            background-color: #ffffff55
+
+        @include tablet
+            display: none
+
+         
+        @include desktop_1024_1290
+            display: none
+
+    &__partners-arrow-left-img, &__partners-arrow-right-img
+        width: 12px
+        height: 21px
+        margin: 0
+        opacity: 0.5
+
+    &__partners-prada, &__partners-carlo
+        @include tablet
+            display: none
+
+    &__partners-sentence
+        font-family: futurabookc
+        font-size: 24px
+        letter-spacing: 1.2px
+        text-align: center
+        @include tablet
+            font-size: 34px
+            line-height: 38px
+         
+    &__partners-question
+        margin-top: 45px
+
+    &__partners-btn
+        border-radius: 10px
+        background-color: $blue
+        width: 360px
+        height: 64px
+        color: #fff
+        font-size: 20px
+        font-family: futurademic
+        letter-spacing: 0.95px
+        border: 0 solid $blue
+        margin: 45px auto
+        text-align: center
+        cursor: pointer
+        transition: all 0.2s ease-out
+        @include tablet
+            width: 440px
+            height: 74px
+            font-size: 30px
+
+        &:hover
+            background-color: #fff
+            color: $blue
+            border: 3px solid $blue
+
+
+footer
+    background: url("design/images/bg.jpg")
+    background-size: cover
+    background-position: center 65%
+    height: 120px
+    width: 100%
+    background-repeat: no-repeat
+
+    @include tablet
+        height: 317px
+        background-size: auto
+        background-position: center 75%
+     
+.footer
+
+    &__container
+        max-width: 1290px
+        width: 100%
+        margin: 0 auto
+        position: relative
+
+    &__inner
+        display: flex
+        flex-wrap: wrap
+        height: 120px
+        align-items: center
+        padding: 0 20px
+        @include tablet
+            flex-direction: column-reverse
+            height: 100%
+            padding-top: 100px
+
+    &__text
+        display: flex
+        flex-wrap: wrap
+        flex-direction: column
+        justify-content: space-evenly
+
+    &__copy
+        font-size: 14px
+        font-family: futurabookc
+        color: rgb(255, 255, 255)
+        width: 100%
+        @include tablet
+            text-align: center
+            font-size: 22px
+
+    &__links
+        margin-top: 15px
+
+    &__link1, &__link2
+        font-size: 12px
+        font-family: futurabookc
+        text-decoration: underline
+        color: rgb(255, 255, 255)
+        opacity: 0.4
+
+        &:hover
+            opacity: 1
+
+        @include tablet
+            font-size: 16px
+
+    &__link1
+        margin-right: 55px
+
+    &__btn
+        border-style: solid
+        border-width: 2px
+        border-color: rgb(255, 255, 255)
+        border-radius: 6px
+        background-color: rgba(41, 211, 209, 0)
+        width: 201px
+        height: 40px
+        display: flex
+        align-items: center
+        justify-content: space-around
+        margin-left: auto
+        cursor: pointer
+        opacity: 1
+        transition: all 0.3s ease-out
+
+        &:hover
+            opacity: 0.5
+
+        @include tablet
+            margin-right: auto
+            margin-left: auto
+            width: 443px
+            height: 74px
+            justify-content: space-evenly
+            margin-bottom: 30px
+
+    &__btn-img
+        width: 18px
+        height: 18px
+        @include tablet
+            width: 28px
+            height: 28px  
+
+    &__btn-title
+        font-size: 16px
+        font-family: futurabookc
+        color: rgb(255, 255, 255)
+        line-height: 1.2
+
+        @include tablet
+            font-size: 28px
+
+         

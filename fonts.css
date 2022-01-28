@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "futurabookc";
+  src: url("design/fonts/futurabookc-webfont.ttf");
+}
+@font-face {
+  font-family: "futurademic";
+  src: url("design/fonts/futurademic-webfont.ttf");
+  font-weight: lighter;
+}
